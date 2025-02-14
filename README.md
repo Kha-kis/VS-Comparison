@@ -1,7 +1,5 @@
 # VSPreview Comparison Script
 
-## Overview
-
 This script is designed for advanced video quality comparisons using VapourSynth and VSPreview. It enables users to load multiple video sources, apply preprocessing techniques such as cropping, scaling, tonemapping, and frame rate adjustments, and analyze the output efficiently.
 
 ## Prerequisites
