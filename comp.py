@@ -16,11 +16,6 @@ source1 = "FirstSourceName"
 source2 = "SecondSourceName"
 source3 = "ThirdSourceName"
 
-# Display frame info
-clip1 = FrameInfo(clip1, source1)
-clip2 = FrameInfo(clip2, source2)
-clip3 = FrameInfo(clip3, source3)
-
 # Frame rate adjustments (if necessary)
 clip1 = core.std.AssumeFPS(clip1, fpsnum=24000, fpsden=1001)
 clip2 = core.std.AssumeFPS(clip2, fpsnum=25000, fpsden=1000)
@@ -70,6 +65,11 @@ clip3 = core.std.SetFrameProps(clip3, _Matrix=vs.MATRIX_BT709, _Transfer=vs.TRAN
 clip1 = core.resize.Lanczos(clip1, format=vs.YUV444P16, range=0)
 clip2 = core.resize.Lanczos(clip2, format=vs.YUV444P16, range=0)
 clip3 = core.resize.Lanczos(clip3, format=vs.YUV444P16, range=1)
+
+# Display frame info
+clip1 = FrameInfo(clip1, source1)
+clip2 = FrameInfo(clip2, source2)
+clip3 = FrameInfo(clip3, source3)
 
 # Output clips for VSPreview
 set_output(clip1, name=source1)
